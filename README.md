@@ -1,4 +1,4 @@
-# Chương trình quản lý sinh viên (làm việc với file nhị phân, sử dụng danh sách liên kết đơn) bao gồm các công việc
+# Chương trình quản lý sinh viên (làm việc với file nhị phân, sử dụng danh sách liên kết đơn, phương pháp trực truy QISAM)
 
 ## Menu
 <img src="./img/menu.png">
