@@ -1,58 +1,57 @@
-# Chương trình quản lý sinh viên (làm việc với file nhị phân, sử dụng danh sách liên kết đơn, phương pháp trực truy QISAM)
+# English Summary: Student Management Program
 
-## Menu
-<img src="./img/menu.png">
+This program manages student information using binary files, single linked lists, and the QISAM direct access method.
 
-## Nhập thông tin từ bàn phím dạng bảng
+## Main Features
 
-- Thông báo nhập thông tin sinh viên thành công <br>
-  <img src="./img/nhap1.png">
-- Kiểm tra nếu nhập mã sinh viên sau trùng với sinh viên trước
-  <img src="./img/nhap2.png">
-- Nhập đến khi nào mã sinh viên là rỗng thì dừng  
-  <img src="./img/nhap3.png">
-- Sau khi kết thúc nhập vẫn có thể từ menu quay lại nhập tiếp
-- Dữ liệu được nhập tự động thêm vào file
+### Menu Interface
+- Provides multiple options for student data management
 
-## Nhập thông tin từ file nhị phân
+### Data Input Methods
+- **Keyboard Input in Table Format**
+  - Successfully adds student information
+  - Checks for duplicate student IDs
+  - Stops input when an empty ID is entered
+  - Allows returning to input mode from the menu
+  - Data is automatically saved to file
 
-<img src="./img/nhap4.png">
+- **Binary File Input**
+  - Can load existing student data from binary files
+  - When adding more data, using the same filename appends to the existing file
+  - Using a different filename creates a new file
 
-- Sau khi chọn nhập thông tin từ file, nếu muốn nhập thêm thông tin vào file, chọn nhập từ bàn phím và nhập tên file trùng với tên file ban đầu. Nếu nhập tên file khác, chương trình sẽ làm việc với file mới
+### Student Information Management
+- **View Student List**
+  - Displays all entered student information
 
-## Xem danh sách sinh viên vừa nhập
-## Tra cứu sinh viên bằng mã hoặc bằng tên
-<img src="./img/traCuu1.png">
-<img src="./img/traCuu2.png">
-<img src="./img/traCuu3.png">
+- **Search Functions**
+  - Search by student ID or name
+  - Press Enter to search after typing keywords
+  - Navigate between search results using left/right arrow keys
+  - Exit search by leaving both ID and Name fields empty
 
-- Gõ từ khóa tìm kiếm và nhấn Enter để tra cứu, để tiếp tục tra cứu nhấn phím mũi tên sang trái hoặc sang phải. Thoát tra cứu khi không nhập từ khóa ở cả 2 cột MSSV và Họ và tên (nhấn Enter để bỏ qua bước nhập)
-  <img src="./img/traCuu4.png">
+- **Filter Students**
+  - Can filter out students with failing grades (below 4)
+  - Filtered students are exported to a separate text file and removed from the binary file
 
-## Lọc ra những sinh viên bị buộc thôi học (có điểm nhỏ hơn 4)
+- **Update Student Information**
+  - Enter student ID to update their information
+  - Press Enter to skip fields you don't want to update
+  - Cancel update by pressing Enter when prompted for student ID
+  - External file data is automatically updated
 
-- Sau khi lọc, thông tin những sinh viên bị buộc thôi học được xuất ra 1 file văn bản riêng và bị xóa khỏi file nhị phân chương trình đang làm việc với
+- **Sort Student List**
+  - Sort by name or grade using "asc" or "desc" commands
+  - Continue sorting with left/right arrow keys
+  - Sorting is canceled when neither column contains "asc" or "desc"
 
-## Cập nhật thông tin sinh viên
-- Nhập mã sinh viên cần cập nhật thông tin   
- <img src="./img/capNhat.png">
- 
-- Nếu cột nào không muốn cập nhật thông tin thì nhấn Enter để bỏ qua
-- Nhấn Enter để bỏ qua nhập mã sinh viên cần cập nhật và hủy cập nhật
-- Thông tin ở bên ngoài file cũng tự động cập nhật theo
-## Sắp xếp danh sách sinh viên theo tên hoặc điểm
-- Ở cột Họ và tên và Điểm, nhập "asc" hoặc "desc" và nhấn Enter để sắp xếp, hủy sắp xếp khi ở 2 côt không là "asc" và "desc"    
-<img src="./img/sapXep1.png">
-<img src="./img/sapXep2.png">
-<img src="./img/sapXep3.png">
-<img src="./img/sapXep4.png">
+- **Delete Students**
+  - Remove students by ID
+  - Cancel deletion by pressing Enter without entering an ID
 
-- Để tiếp tục sắp xếp, nhấn phím mũi tên sang trái hoặc sang phải
-## Xóa sinh viên bằng mã sinh viên
-- Nhấn Enter bỏ qua việc nhập mã để hủy xóa
-## Xuất thông tin từ chương trình ra file văn bản để có thể xem thông tin trực quan
-<img src="./img/xuat1.png">
-<img src="./img/xuat.png">
-
-## Xuất thông tin từ chương trình ra file nhị phân để có thể lưu trữ và dùng cho các lần sau
-<img src="./img/xuat2.png">
+### Data Export Options
+- **Export to Text File**
+  - Creates a human-readable text file of student information
+  
+- **Export to Binary File**
+  - Saves data for future use
